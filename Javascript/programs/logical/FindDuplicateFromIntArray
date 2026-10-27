@@ -1,0 +1,22 @@
+let ar = [1, 2, 3, 4, 5, 6, 1, 8, 3, 4, 2];
+let count = 0;
+
+console.log("Duplicate numbers are:");
+
+for (let i = 0; i < ar.length; i++) {
+    for (let j = i + 1; j < ar.length; j++) {
+        if (ar[i] === ar[j]) {
+            console.log(ar[i]);
+            count++;
+        }
+    }
+}
+
+console.log("Number of duplicates are " + count);
+
+let ar1 = [1, 2, 3, 4, 5, 6, 1, 8, 3, 4, 2];
+
+let duplicates = ar.filter((num, index) => ar.indexOf(num) !== index);
+
+console.log("Duplicate numbers are:", [...new Set(duplicates)]);
+console.log("Number of duplicates are " + duplicates.length);
